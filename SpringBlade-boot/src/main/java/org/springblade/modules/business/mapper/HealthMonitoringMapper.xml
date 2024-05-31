@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="org.springblade.modules.business.mapper.HealthMonitoringMapper">
+
+    <!-- 通用查询映射结果 -->
+    <resultMap id="healthMonitoringResultMap" type="org.springblade.modules.business.entity.HealthMonitoring">
+        <result column="id" property="id"/>
+        <result column="create_user" property="createUser"/>
+        <result column="create_dept" property="createDept"/>
+        <result column="create_time" property="createTime"/>
+        <result column="update_user" property="updateUser"/>
+        <result column="update_time" property="updateTime"/>
+        <result column="status" property="status"/>
+        <result column="is_deleted" property="isDeleted"/>
+        <result column="id_number" property="idNumber"/>
+        <result column="monitoring_date" property="monitoringDate"/>
+        <result column="height" property="height"/>
+        <result column="weight" property="weight"/>
+        <result column="heart_rate" property="heartRate"/>
+        <result column="diastolic_pressure" property="diastolicPressure"/>
+        <result column="systolic_pressure" property="systolicPressure"/>
+        <result column="blood_sugar" property="bloodSugar"/>
+        <result column="other" property="other"/>
+    </resultMap>
+
+
+    <select id="selectHealthMonitoringPage" resultMap="healthMonitoringResultMap">
+        select * from yl_health_monitoring where is_deleted = 0
+    </select>
+
+</mapper>

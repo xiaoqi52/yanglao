@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="org.springblade.modules.business.mapper.RoomMapper">
+
+    <!-- 通用查询映射结果 -->
+    <resultMap id="roomResultMap" type="org.springblade.modules.business.entity.Room">
+        <result column="id" property="id"/>
+        <result column="create_user" property="createUser"/>
+        <result column="create_dept" property="createDept"/>
+        <result column="create_time" property="createTime"/>
+        <result column="update_user" property="updateUser"/>
+        <result column="update_time" property="updateTime"/>
+        <result column="status" property="status"/>
+        <result column="is_deleted" property="isDeleted"/>
+        <result column="room_number" property="roomNumber"/>
+        <result column="orientation" property="orientation"/>
+        <result column="area" property="area"/>
+        <result column="bed_count" property="bedCount"/>
+        <result column="description" property="description"/>
+        <result column="bed_monthly_price" property="bedMonthlyPrice"/>
+    </resultMap>
+
+
+    <select id="selectRoomPage" resultMap="roomResultMap">
+        select * from yl_room where is_deleted = 0
+    </select>
+
+</mapper>

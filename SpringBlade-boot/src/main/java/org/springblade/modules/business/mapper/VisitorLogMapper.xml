@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="org.springblade.modules.business.mapper.VisitorLogMapper">
+
+    <!-- 通用查询映射结果 -->
+    <resultMap id="visitorLogResultMap" type="org.springblade.modules.business.entity.VisitorLog">
+        <result column="id" property="id"/>
+        <result column="create_user" property="createUser"/>
+        <result column="create_dept" property="createDept"/>
+        <result column="create_time" property="createTime"/>
+        <result column="update_user" property="updateUser"/>
+        <result column="update_time" property="updateTime"/>
+        <result column="status" property="status"/>
+        <result column="is_deleted" property="isDeleted"/>
+        <result column="id_number" property="idNumber"/>
+        <result column="main_visitor_name" property="mainVisitorName"/>
+        <result column="visitor_count" property="visitorCount"/>
+        <result column="relationship" property="relationship"/>
+        <result column="visit_time" property="visitTime"/>
+        <result column="leave_time" property="leaveTime"/>
+    </resultMap>
+
+
+    <select id="selectVisitorLogPage" resultMap="visitorLogResultMap">
+        select * from yl_visitor_log where is_deleted = 0
+    </select>
+
+</mapper>

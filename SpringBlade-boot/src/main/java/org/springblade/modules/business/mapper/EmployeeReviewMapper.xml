@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="org.springblade.modules.business.mapper.EmployeeReviewMapper">
+
+    <!-- 通用查询映射结果 -->
+    <resultMap id="employeeReviewResultMap" type="org.springblade.modules.business.entity.EmployeeReview">
+        <result column="id" property="id"/>
+        <result column="create_user" property="createUser"/>
+        <result column="create_dept" property="createDept"/>
+        <result column="create_time" property="createTime"/>
+        <result column="update_user" property="updateUser"/>
+        <result column="update_time" property="updateTime"/>
+        <result column="status" property="status"/>
+        <result column="is_deleted" property="isDeleted"/>
+        <result column="reviewer_id" property="reviewerId"/>
+        <result column="employee_id" property="employeeId"/>
+        <result column="review_date" property="reviewDate"/>
+        <result column="score" property="score"/>
+        <result column="comment" property="comment"/>
+    </resultMap>
+
+
+    <select id="selectEmployeeReviewPage" resultMap="employeeReviewResultMap">
+        select * from yl_employee_review where is_deleted = 0
+    </select>
+
+</mapper>

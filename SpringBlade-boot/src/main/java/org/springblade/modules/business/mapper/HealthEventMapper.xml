@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="org.springblade.modules.business.mapper.HealthEventMapper">
+
+    <!-- 通用查询映射结果 -->
+    <resultMap id="healthEventResultMap" type="org.springblade.modules.business.entity.HealthEvent">
+        <result column="id" property="id"/>
+        <result column="create_user" property="createUser"/>
+        <result column="create_dept" property="createDept"/>
+        <result column="create_time" property="createTime"/>
+        <result column="update_user" property="updateUser"/>
+        <result column="update_time" property="updateTime"/>
+        <result column="status" property="status"/>
+        <result column="is_deleted" property="isDeleted"/>
+        <result column="event_time" property="eventTime"/>
+        <result column="id_number" property="idNumber"/>
+        <result column="event_type" property="eventType"/>
+        <result column="event_description" property="eventDescription"/>
+    </resultMap>
+
+
+    <select id="selectHealthEventPage" resultMap="healthEventResultMap">
+        select * from yl_health_event where is_deleted = 0
+    </select>
+
+</mapper>

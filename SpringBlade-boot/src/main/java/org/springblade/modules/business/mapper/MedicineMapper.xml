@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="org.springblade.modules.business.mapper.MedicineMapper">
+
+    <!-- 通用查询映射结果 -->
+    <resultMap id="medicineResultMap" type="org.springblade.modules.business.entity.Medicine">
+        <result column="id" property="id"/>
+        <result column="create_user" property="createUser"/>
+        <result column="create_dept" property="createDept"/>
+        <result column="create_time" property="createTime"/>
+        <result column="update_user" property="updateUser"/>
+        <result column="update_time" property="updateTime"/>
+        <result column="status" property="status"/>
+        <result column="is_deleted" property="isDeleted"/>
+        <result column="medicine_type" property="medicineType"/>
+        <result column="medicine_name" property="medicineName"/>
+        <result column="manufacturer" property="manufacturer"/>
+        <result column="production_date" property="productionDate"/>
+        <result column="valid_days" property="validDays"/>
+        <result column="price" property="price"/>
+        <result column="quantity" property="quantity"/>
+    </resultMap>
+
+
+    <select id="selectMedicinePage" resultMap="medicineResultMap">
+        select * from yl_medicine where is_deleted = 0
+    </select>
+
+</mapper>

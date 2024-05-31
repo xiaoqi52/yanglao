@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="org.springblade.modules.business.mapper.OutingApplicationMapper">
+
+    <!-- 通用查询映射结果 -->
+    <resultMap id="outingApplicationResultMap" type="org.springblade.modules.business.entity.OutingApplication">
+        <result column="id" property="id"/>
+        <result column="create_user" property="createUser"/>
+        <result column="create_dept" property="createDept"/>
+        <result column="create_time" property="createTime"/>
+        <result column="update_user" property="updateUser"/>
+        <result column="update_time" property="updateTime"/>
+        <result column="status" property="status"/>
+        <result column="is_deleted" property="isDeleted"/>
+        <result column="id_number" property="idNumber"/>
+        <result column="application_date" property="applicationDate"/>
+        <result column="expected_out_date" property="expectedOutDate"/>
+        <result column="expected_return_date" property="expectedReturnDate"/>
+        <result column="actual_out_date" property="actualOutDate"/>
+        <result column="actual_return_date" property="actualReturnDate"/>
+        <result column="reason" property="reason"/>
+    </resultMap>
+
+
+    <select id="selectOutingApplicationPage" resultMap="outingApplicationResultMap">
+        select * from yl_outing_application where is_deleted = 0
+    </select>
+
+</mapper>

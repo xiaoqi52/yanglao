@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="org.springblade.modules.business.mapper.ElderlyMapper">
+
+    <!-- 通用查询映射结果 -->
+    <resultMap id="elderlyResultMap" type="org.springblade.modules.business.entity.Elderly">
+        <result column="id" property="id"/>
+        <result column="create_user" property="createUser"/>
+        <result column="create_dept" property="createDept"/>
+        <result column="create_time" property="createTime"/>
+        <result column="update_user" property="updateUser"/>
+        <result column="update_time" property="updateTime"/>
+        <result column="status" property="status"/>
+        <result column="is_deleted" property="isDeleted"/>
+        <result column="id_number" property="idNumber"/>
+        <result column="name" property="name"/>
+        <result column="gender" property="gender"/>
+        <result column="birth_date" property="birthDate"/>
+        <result column="phone" property="phone"/>
+        <result column="origin_city" property="originCity"/>
+        <result column="home_address" property="homeAddress"/>
+        <result column="guardian_name" property="guardianName"/>
+        <result column="guardian_gender" property="guardianGender"/>
+        <result column="guardian_phone" property="guardianPhone"/>
+        <result column="username" property="username"/>
+        <result column="password" property="password"/>
+        <result column="room_number" property="roomNumber"/>
+        <result column="bed_number" property="bedNumber"/>
+        <result column="check_in_date" property="checkInDate"/>
+        <result column="special_care_type" property="specialCareType"/>
+        <result column="health_status" property="healthStatus"/>
+    </resultMap>
+
+
+    <select id="selectElderlyPage" resultMap="elderlyResultMap">
+        select * from yl_elderly where is_deleted = 0
+    </select>
+
+</mapper>
