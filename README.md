@@ -15,12 +15,14 @@
 
 ## 核心技术栈
 
-| 技术栈                  | 版本         |
+| 技术栈                | 版本        |
 |----------------------|------------|
+| Vue                  | 2+         |
 | Java                 | 17+        |
 | Spring               | 6.1.5      |
 | Spring Boot          | 3.2.4      |
 | Mybatis Plus         | 3.5.6      |
+
 ## 业务模块
 ![image](https://github.com/xiaoqi52/yanglao/assets/64411983/2ec3da2e-0df1-459e-b667-1d45881c0d46)
 
