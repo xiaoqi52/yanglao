@@ -37,6 +37,9 @@
 ![image](https://github.com/xiaoqi52/yanglao/assets/64411983/646f0ce1-7081-4425-927b-48ba03f0de6f)
 ![image](https://github.com/xiaoqi52/yanglao/assets/64411983/72ff5345-997d-4cc7-a109-712425001849)
 ![image](https://github.com/xiaoqi52/yanglao/assets/64411983/887e5432-5123-49ca-80c3-9cdad28e4952)
+![image](https://github.com/xiaoqi52/yanglao/assets/64411983/861258c9-7a89-4ed2-afe8-294711939864)
+![image](https://github.com/xiaoqi52/yanglao/assets/64411983/49aa3981-0ff9-478f-a6ac-b1ffd162b24d)
+
 ![image](https://github.com/xiaoqi52/yanglao/assets/64411983/d861aa91-7c59-4b2c-a345-ead20da6e10b)
 ![image](https://github.com/xiaoqi52/yanglao/assets/64411983/3b6b75a2-1ea5-4837-bfad-164a721ff9c2)
 #### 动态控制列显隐
@@ -46,6 +49,8 @@
 
 
 # 联系方式
+* 获取完整项目请加下面联系方式
+* 另提供：毕设定制、项目修改、项目讲解等服务
 * Vx: Xqgzs1804
 * QQ: 2278023068
 
